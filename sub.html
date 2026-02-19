@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    background-color:black;
+}
+
+.parent{
+    border:2px solid white;
+    margin:10px auto;
+    height:1050px;
+    width:600px;
+    position:relative;
+}
+
+.img2{
+    width:100%;
+    height:100%;
+    display:block;
+}
+
+
+.play-btn{
+    position:absolute;
+    bottom:40px;
+    left:50%;
+    transform:translateX(-50%);
+    
+    padding:15px 60px;
+    
+    font-size:32px;
+    font-weight:bold;
+    
+    color:rgb(184, 70, 70);
+    
+    background:linear-gradient(45deg, #11327e, #186435);
+    
+    border:none;
+    border-radius:50px;
+    
+    cursor:pointer;
+    
+    box-shadow:0 0 20px rgba(255,0,76,0.7);
+    
+   
+    
+    transition:0.3s;
+}
+
+.play-btn:hover{
+    transform:translateX(-50%) scale(1.1);
+    box-shadow:0 0 20px rgb(63, 177, 22);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="parent">
+
+    <img class="img2" src="subway.jpg">
+
+    <a href="sub2.html"><button class="play-btn">PLAY</button></a>
+
+</div>
+
+</body>
+</html>
