@@ -1,0 +1,49 @@
+<!-- //Vowel or Consonant Checker Create a JS program that takes a character from the user -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowel Checker</title>
+    <style>
+        *{
+            background-color:beige;
+            margin: 0px;
+            padding: 0px;
+            text-align: center;
+        }
+        #webd{
+            margin: 100px;
+            padding: 100px;
+        }
+        #charc{
+            text-align: center;
+        }
+        #field{
+            background-color: black;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="webd">
+        <h2><u><i><b>VOWEL OR CONSONANT CHECKER</b></i></u></h2>
+        <div id="field">
+        <input type="text" id="charc" placeholder="Enter one character"><br><br>
+        <button onclick="checkCharac()">Check Character</button>
+        <h3 id="result"></h3>
+        </div>
+        <script>
+            function checkCharac() {
+                let ch = document.getElementById("charc").value;
+                if ("aeiou".includes(ch)) {
+                    document.getElementById("result").innerHTML = ch + " is a Vowel";
+                } 
+                else {
+                    document.getElementById("result").innerHTML = ch + " is a Consonant";
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>
