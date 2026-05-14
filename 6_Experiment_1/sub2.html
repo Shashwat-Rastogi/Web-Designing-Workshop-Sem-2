@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Subway Menu</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    background-color:black;
+    font-family:Arial;
+}
+
+.parent{
+    position:relative;
+    width:100%;
+}
+
+
+.parent img{
+    width:100%;
+    display:block;
+}
+
+
+.start-btn{
+    position:absolute;
+    bottom:120px;
+    left:50%;
+    transform:translateX(-50%);
+    
+    padding:20px 80px;
+    
+    font-size:40px;
+    font-weight:bold;
+    
+    color:white;
+    
+    background:linear-gradient(45deg,#ff0000,#ff9900);
+    
+    border:none;
+    border-radius:60px;
+    
+    box-shadow:0 0 25px red;
+    
+    cursor:pointer;
+    
+    transition:0.3s;
+}
+
+.start-btn:hover{
+    transform:translateX(-50%) scale(1.1);
+    box-shadow:0 0 50px orange;
+}
+
+
+
+.char-btn{
+    position:absolute;
+    bottom:40px;
+    left:80px;
+    
+    padding:15px 40px;
+    
+    font-size:22px;
+    
+    color:white;
+    
+    background:linear-gradient(45deg,#00c6ff,#0072ff);
+    
+    border:none;
+    
+    border-radius:40px;
+    
+    box-shadow:0 0 20px cyan;
+    
+    cursor:pointer;
+}
+
+
+
+.store-btn{
+    position:absolute;
+    bottom:40px;
+    right:80px;
+    
+    padding:15px 50px;
+    
+    font-size:22px;
+    
+    color:black;
+    
+    background:linear-gradient(45deg,#00ff99,#00cc66);
+    
+    border:none;
+    
+    border-radius:10px;
+    
+    box-shadow:0 0 20px lime;
+    
+    cursor:pointer;
+}
+
+
+
+.settings-btn{
+    position:absolute;
+    top:40px;
+    right:40px;
+    
+    width:70px;
+    height:70px;
+    
+    border-radius:50%;
+    
+    border:none;
+    
+    font-size:28px;
+    
+    color:white;
+    
+    background:linear-gradient(45deg,#666,#222);
+    
+    box-shadow:0 0 15px white;
+    
+    cursor:pointer;
+}
+
+.settings-btn:hover{
+    transform:rotate(90deg);
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="parent">
+
+<img src="sub3.jpg">
+
+<button class="start-btn">START</button>
+
+<button class="char-btn">CHARACTERS</button>
+
+<button class="store-btn">STORE</button>
+
+<button class="settings-btn">⚙</button>
+
+</div>
+
+</body>
+</html>
