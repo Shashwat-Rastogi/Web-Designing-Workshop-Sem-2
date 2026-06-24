@@ -1,70 +1,79 @@
-import { useState } from "react";
+const { useState, useEffect } = React;
 
 function App() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [users, setUsers] = useState([]);
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    const newUser = {
-      name,
-      email,
-    };
-
-    setUsers([...users, newUser]);
-
-    setName("");
-    setEmail("");
-    setPassword("");
-  };
-
   return (
-    <div className="container">
-      <div className="form-box">
-        <h1>Registration Form</h1>
+    <div
+      style={{
+        border: "2px solid black",
+        padding: "20px",
+        width: "700px",
+        margin: "20px auto",
+        borderRadius: "10px",
+        textAlign: "center",
+        fontFamily: "Arial"
+      }}
+    >
+      <h1
+        style={{
+          color: "brown",
+          marginBottom: "30px"
+        }}
+      >
+        Product Showcase
+      </h1>
 
-        <form onSubmit={handleSubmit}>
-          <input
-            type="text"
-            placeholder="Enter Name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          gap: "20px",
+          flexWrap: "wrap"
+        }}
+      >
 
-          <input
-            type="email"
-            placeholder="Enter Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-
-          <input
-            type="password"
-            placeholder="Enter Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-
-          <button type="submit">Register</button>
-        </form>
-
-        <div className="users-box">
-          <h2>Registered Users</h2>
-
-          <ul>
-            {users.map((user, index) => (
-              <li key={index}>
-                {user.name} - {user.email}
-              </li>
-            ))}
-          </ul>
+        <div
+          style={{
+            backgroundColor: "lightblue",
+            padding: "20px",
+            borderRadius: "10px",
+            border: "2px solid blue",
+            width: "180px"
+          }}
+        >
+          <h2>Wireless Mouse</h2>
+          <p>Price:799</p>
+          <p>Category: Electronics</p>
         </div>
+
+        <div
+          style={{
+            backgroundColor: "lightgreen",
+            padding: "20px",
+            borderRadius: "10px",
+            border: "2px solid green",
+            width: "180px"
+          }}
+        >
+          <h2>Running Shoes</h2>
+          <p>Price:2499</p>
+          <p>Category: Footwear</p>
+        </div>
+
+        <div
+          style={{
+            backgroundColor: "pink",
+            padding: "20px",
+            borderRadius: "10px",
+            border: "2px solid red",
+            width: "180px"
+          }}
+        >
+          <h2>Smart Watch</h2>
+          <p>Price:3999</p>
+          <p>Category: Gadgets</p>
+        </div>
+
       </div>
     </div>
   );
 }
-
-export default App;
